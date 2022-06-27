@@ -1,0 +1,272 @@
+/**************************
+ * FONTS
+ **************************/
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+         url('fonts/Poppins-Regular.woff') format('woff'),
+         url('fonts/Poppins-Regular.svg.ttf') format('truetype'),
+         url('fonts/Poppins-Regular.ttf.svg#poppinsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('fonts/Poppins-Bold.woff2') format('woff2'),
+         url('fonts/Poppins-Bold.woff') format('woff'),
+         url('fonts/Poppins-Bold.ttf') format('truetype'),
+         url('fonts/Poppins-Bold.svg#poppinsbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('fonts/Poppins-SemiBold.woff') format('woff'),
+         url('fonts/Poppins-SemiBold.ttf') format('truetype'),
+         url('fonts/Poppins-SemiBold.svg#poppinssemibold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Winkle-Regular';
+    src: url('fonts/Winkle-Regular.woff2') format('woff2'),
+         url('fonts/Winkle-Regular.woff') format('woff'),
+         url('fonts/Winkle-Regular.ttf') format('truetype'),
+         url('fonts/Winkle-Regular.svg#winkleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/**************************
+ * COMMUN
+ **************************/
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Winkle-Regular';
+    font-size: 460px;
+    letter-spacing: -25px;
+    color: #8A84B7;
+    margin: 0;
+}
+
+h2 span {
+    color: #625E99;
+}
+
+div.description {
+    font-family: 'Poppins-SemiBold';
+    font-size: 30px;
+    text-align: center;
+    color: #EFBE2A;
+    position: relative;
+    transform: rotate(355deg);
+    display: inline-block;
+}
+
+div.description div {
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 3px;
+    padding: 0 5px;
+    display: table;
+}
+
+
+
+
+/**************************
+ * AUTRE
+ **************************/
+
+#button-etsy {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-family: 'Winkle-Regular';
+    font-size: 27px;
+    border: 3.78516px solid #FFFFFF;
+    background: transparent;
+}
+
+#button-etsy a,
+#button-etsy a:focus,
+#button-etsy a:hover {
+    color: #fff;
+}
+
+.fp-watermark {
+    display: none !important;
+}
+
+
+
+
+/**************************
+ * MENU
+ **************************/
+
+#section-home header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#section-home header h1 {
+    opacity: 0;
+    position: absolute;
+}
+
+#section-home header div:not(.header-contact) a {
+    font-family: 'Poppins-Regular';
+    font-size: 21px;
+}
+
+#section-home header div:not(.header-contact) a,
+#section-home header div:not(.header-contact) a:focus,
+#section-home header div:not(.header-contact) a:hover {
+    color: #fff;
+}
+
+#section-home header div.header-contact {
+    border: 0.946289px solid #EFBE2A;
+    filter: drop-shadow(0px 3.78516px 3.78516px rgba(0, 0, 0, 0.25));
+    padding: 6px 8px 3px 8px;
+}
+
+#section-home header div.header-contact a {
+    font-family: 'Poppins-Bold';
+    font-size: 21px;
+    line-height: 21px;
+}
+
+#section-home header div.header-contact a,
+#section-home header div.header-contact a:focus,
+#section-home header div.header-contact a:hover {
+    color: #EFBE2A;
+}
+
+
+
+
+/**************************
+ * SLIDE HOME
+ **************************/
+
+#section-home > div {
+    position: relative;
+    height: 83%;
+}
+
+#section-home > div img {
+    position: absolute;
+}
+
+#section-home > div img:nth-child(1) {
+    left: 20rem;
+    z-index: 1;
+}
+
+#section-home > div img:nth-child(2) {
+    left: 42rem;
+    top: -3rem;
+    z-index: 2;
+}
+
+#section-home > div img:nth-child(3) {
+    left: 50rem;
+    bottom: 4rem;
+    z-index: 2;
+}
+
+#section-home > div img:nth-child(4) {
+    right: 20rem;
+    z-index: 3;
+}
+
+#section-home > div img:nth-child(5) {
+    left: 38rem;
+    z-index: 4;
+}
+
+
+
+
+/**************************
+ * SLIDE PAPER ART
+ **************************/
+
+#section-paper-art .content {
+    display: flex;
+}
+
+#section-paper-art .content .description {
+    left: 10rem;
+}
+
+
+
+
+/**************************
+ * SLIDE CONTACT
+ **************************/
+
+#section-contact h2 {
+    font-size: 150px;
+}
+
+#section-contact h3 {
+    font-family: 'Poppins-SemiBold';
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #625E99;
+}
+
+#section-contact > div:nth-child(2) .message {
+    font-family: 'Winkle-Regular';
+    font-size: 48px;
+    color: #fff;
+}
+
+#section-contact > div:nth-child(2) input[type=submit] {
+    font-family: 'Winkle-Regular';
+    font-size: 62px;
+    color: #8A84B7;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+
+/**************************
+ * FOOTER
+ **************************/
+
+#section-contact footer a {
+    font-family: 'Poppins-SemiBold';
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+#section-contact footer a,
+#section-contact footer a:focus,
+#section-contact footer a:hover {
+    color: #fff;
+}
+
