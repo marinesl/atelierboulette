@@ -3,50 +3,184 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier Boulette | Bientôt en ligne</title>
+    <title>Atelier Boulette</title>
 
     <!-- TODO: Faire un favicon -->
 
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/fullpage.min.css">
 
-    <!-- TODO: A tester en ligne -->
+    <!-- TODO: Décommenter en ligne -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R89XSB38RB"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-R89XSB38RB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-R89XSB38RB');
-    </script>
+    </script> -->
 </head>
 
 <body>
 
-    <header>
-        <div>
-            <img src="image/logo.svg" alt="Logo Atelier Boulette">
+    <div id="fullpage">
+
+        <!-- Slide Home -->
+        <div class="section" id="section-home" data-anchor="accueil">
+            <header>
+                <div><img src="image/slide-header/LOGO.svg" alt="Atelier Boulette"><h1>Atelier Boulette</h1></div>
+                <div><a href="#paper-art">Paper Art</a></div>
+                <div><a href="#decoration">Décoration</a></div>
+                <div><a href="#resine">Résine</a></div>
+                <div><a href="#upcycling">Upcycling</a></div>
+                <div><a href="#flocage">Flocage</a></div>
+                <div><a href="#contact">Contact</a></div>
+            </header>
+
+            <div>
+                <img src="image/slide-accueil/frame 1.svg" alt="Photo">
+                <img src="image/slide-accueil/frame 2.svg" alt="Photo">
+                <img src="image/slide-accueil/frame 3.svg" alt="Photo">
+                <img src="image/slide-accueil/frame 4.svg" alt="Photo">
+            </div>
         </div>
-    </header>
+
+        <!-- Slide Paper art -->
+        <div class="section" id="section-paper-art" data-anchor="paper-art">
+            <div><h2>Paper art</h2></div>
+            <div>
+                <p>Cake topper, cartes étapes, panneaux, initiales 3D, fanions, cartes de voeux...</p>
+            </div>
+
+            <div>
+                <img src="image/slide-paper-art/frame 1.svg" alt="Photo">
+                <img src="image/slide-paper-art/frame 2.svg" alt="Photo">
+                <img src="image/slide-paper-art/frame 3.svg" alt="Photo">
+                <img src="image/slide-paper-art/frame 4.svg" alt="Photo">
+
+                <img src="image/slide-paper-art/tasse.svg" alt="Tasse">
+            </div>
+        </div>
+
+        <!-- Slider Déco -->
+        <div class="section" id="section-deco" data-anchor="decoration">
+            <div><h2>Déco</h2></div>
+            <div>
+                <p>Couronnes de fleurs, fanions, initiale 2D...</p>
+            </div>
+
+            <div>
+                <img src="image/slide-deco/frame 1.svg" alt="Photo">
+                <img src="image/slide-deco/frame 2.svg" alt="Photo">
+                <img src="image/slide-deco/frame 3.svg" alt="Photo">
+                <img src="image/slide-deco/frame 4.svg" alt="Photo">
+                <img src="image/slide-deco/frame 5.svg" alt="Photo">
+
+                <img src="image/slide-deco/ampoule.svg" alt="Ampoule">
+                <img src="image/slide-deco/crayon.svg" alt="Crayon">
+            </div>
+        </div>
+
+        <!-- Slider Résine -->
+        <div class="section" id="section-resine" data-anchor="resine">
+            <div><h2>Résine</h2></div>
+            <div>
+                <p>Porte clé, cake topper, marque page...</p>
+            </div>
+
+            <div>
+                <img src="image/slide-resine/frame 1.svg" alt="Photo">
+                <img src="image/slide-resine/frame 2.svg" alt="Photo">
+                <img src="image/slide-resine/frame 3.svg" alt="Photo">
+                <img src="image/slide-resine/frame 4.svg" alt="Photo">
+                <img src="image/slide-resine/frame 5.svg" alt="Photo">
+
+                <img src="image/slide-resine/cactus.svg" alt="Cactus">
+                <img src="image/slide-resine/tasse.svg" alt="Tasse">
+            </div>
+        </div>
+
+        <!-- Slider Up cycling -->
+        <div class="section" id="section-up-cycling" data-anchor="upcycling">
+            <div><h2>Up cycling</h2></div>
+            <div>
+                <p>Porte clé, marque page, étiquette de voyage...</p>
+            </div>
+
+            <div>
+                <img src="image/slide-upcycling/frame 1.svg" alt="Photo">
+                <img src="image/slide-upcycling/frame 2.svg" alt="Photo">
+                <img src="image/slide-upcycling/frame 3.svg" alt="Photo">
+                <img src="image/slide-upcycling/frame 4.svg" alt="Photo">
+                <img src="image/slide-upcycling/frame 5.svg" alt="Photo">
+
+                <img src="image/slide-upcycling/ampoule.svg" alt="Ampoule">
+                <img src="image/slide-upcycling/crayon.svg" alt="Crayon">
+            </div>
+        </div>
+
+        <!-- Slider Flocage -->
+        <div class="section" id="section-flocage" data-anchor="flocage">
+            <div><h2>Flocage</h2></div>
+            <div>
+                <p>Porte clé, marque page, étiquette de voyage, tote bag, pochettes...</p>
+            </div>
+
+            <div>
+                <img src="image/slide-flocage/frame 1.svg" alt="Photo">
+                <img src="image/slide-flocage/frame 2.svg" alt="Photo">
+                <img src="image/slide-flocage/frame 3.svg" alt="Photo">
+                <img src="image/slide-flocage/frame 4.svg" alt="Photo">
+
+                <img src="image/slide-flocage/cactus.svg" alt="Cactus">
+                <img src="image/slide-flocage/tasse.svg" alt="Tasse">
+            </div>
+        </div>
+
+        <!-- Slider Contact -->
+        <div class="section" id="section-contact" data-anchor="contact">
+            <div><h3>Toutes ces realisations sont personnalisables</h3></div>
+            <div>
+                <h2>Une question ?</h2>
+                <div>
+                    <form action="">
+                        <input type="text" name="name" id="name" placeholder="Nom et prénom :">
+                        <input type="email" name="email" id="email" placeholder="Email :">
+                        <textarea name="message" id="message" cols="30" rows="10">Message :</textarea>
+                        <p>Message envoyé !</p>
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </div>
+            </div>
+            <div>
+                <h2>Un like ?</h2>
+                <div><a href=""><img src="image/slide-contact/facebook.svg" alt="Facebook"></a></div>
+                <div><a href=""><img src="image/slide-contact/instagram.svg" alt="Instagram"></a></div>
+                <div><a href=""><img src="image/slide-contact/etsy.svg" alt="Etsy"></a></div>
+            </div>
+
+            <footer>
+                <div>
+                    <a href="#">Mentions légales</a>
+                </div>
+            </footer>
+        </div>
+
+        <button>en savoir +</button>
+    </div>
 
     <main>
-        <div>
-            <h1>Bientôt<br>en ligne</h1>
-        </div>
-    
-        <div>
-            <p>Le site sera disponible prochainement</p>
-        </div>
+        
     </main>
 
     <footer>
-        <div>
-            <p>Paper art - Décoration - Résine - Upcycling - Flocage</p>
-        </div>
-    
-        <div>
-            <p>IG : <a href="https://www.instagram.com/atelierboulette/" target="_blank" title="Page Instagram">@atelierboulette</a> // Etsy : <a href="https://etsy.me/3BCv00C" target="_blank" title="Page Etsy">atelierboulette</a> // <a href="mailto:atelierboulette@gmail.com" title="Email">atelierboulette@gmail.com</a></p>
-        </div>
+        
     </footer>
+    
+
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/fullpage.min.js"></script>
+    <script src="script/script.js"></script>
 
 </body>
 

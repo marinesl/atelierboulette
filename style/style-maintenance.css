@@ -1,0 +1,277 @@
+/**************************
+ * FONTS
+ **************************/
+
+@font-face {
+    font-family: 'sf-ui-display-Medium';
+    src: url('fonts/sf-ui-display-Medium.woff2') format('woff2'),
+         url('fonts/sf-ui-display-Medium.woff') format('woff'),
+         url('fonts/sf-ui-display-Medium.ttf') format('truetype'),
+         url('fonts/sf-ui-display-Medium.svg#sf-ui-display-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sf-ui-display-Light';
+    src: url('fonts/sf-ui-display-Light.woff2') format('woff2'),
+         url('fonts/sf-ui-display-Light.woff') format('woff'),
+         url('fonts/sf-ui-display-Light.ttf') format('truetype'),
+         url('fonts/sf-ui-display-Light.svg#sf-ui-display-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sf-ui-display-Bold';
+    src: url('fonts/sf-ui-display-Bold.woff2') format('woff2'),
+         url('fonts/sf-ui-display-Bold.woff') format('woff'),
+         url('fonts/sf-ui-display-Bold.ttf') format('truetype'),
+         url('fonts/sf-ui-display-Bold.svg#sf_ui_displaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body */ 
+body {
+    background-color: #8a84b7;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+/* Header */
+header img {
+    width: 20%;
+}
+
+/* Main */
+main div:first-child {
+    text-align: center;
+}
+
+main div:first-child h1 {
+    font-family: 'sf-ui-display-Bold';
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+main div:last-child p {
+    font-family: 'sf-ui-display-Medium';   
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #efbe2a;
+    padding: 5px 10px 1px 10px;
+    margin-top: 0;;
+}
+
+/* Footer */
+footer div:first-child {
+    text-transform: uppercase;
+}
+
+footer div p {
+    font-family: 'sf-ui-display-Light';
+    text-align: center;
+    color: #fff;
+    background-color: #6d67b2;
+    padding: 5px 10px 3px 10px;
+}
+
+footer a, footer a:hover, footer a:focus {
+    color: #fff;
+}
+
+
+@media (min-width: 320px)  {
+    /* Header */
+    header {
+        padding-top: 4rem;
+    }
+
+    /* Main */
+    main div:first-child h1 {
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+
+    main div:last-child p {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+
+    /* Footer */
+    footer div p {
+        font-size: 0.6rem;
+        line-height: 0.6rem;
+    }
+}
+
+@media (min-width: 414px)  {
+    /* Main */
+    main div:first-child h1 {
+        font-size: 4.5rem;
+        line-height: 4rem;
+    }
+
+    main div:last-child p {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+    }
+
+    /* Footer */
+    footer div p {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+}
+
+@media (min-width: 480px)  {
+    /* Main */
+    main div:first-child h1 {
+        font-size: 5rem;
+        line-height: 4.5rem;
+    }
+
+    main div:last-child p {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+    }
+
+    /* Footer */
+    footer div p {
+        font-size: 0.9rem;
+        line-height: 0.9rem;
+    }
+}
+
+@media (min-width: 600px)  {
+    /* Header */
+    header {
+        padding-top: 4rem;
+    }
+
+    /* Main */
+    main div:first-child h1 {
+        font-size: 5rem;
+        line-height: 4.5rem;
+    }
+
+    main div:last-child p {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+    }
+
+    /* Footer */
+    footer div p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
+
+@media (min-width: 768px)  {
+    /* Header */
+    header {
+        padding-top: 4rem;
+    }
+
+    /* Main */
+    main div:first-child h1 {
+        font-size: 5.5rem;
+        line-height: 5rem;
+    }
+
+    main div:last-child p {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+}
+
+@media (min-width: 1280px)  {
+    /* Header */
+    header {
+        padding-top: 6rem;
+    }
+
+    /* Main */
+    main div:first-child h1 {
+        font-size: 6rem;
+        line-height: 5rem;
+    }
+
+    main div:last-child p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (min-width: 1440px)  {
+    /* Header */
+    header {
+        padding-top: 8rem;
+    }
+
+    /* Main */
+    main div:first-child h1 {
+        font-size: 8rem;
+        line-height: 7rem;
+    }
+
+    main div:last-child p {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+}
+
+
+@media (min-width: 600px) and (min-height: 1000px) {
+    /* Footer */
+    footer {  
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) and (max-height: 1000px) {
+    /* Footer */
+    footer {  
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Footer */
+    footer {  
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-height: 600px) {
+    /* Header */
+    header {
+        padding-top: 1rem;
+    }
+
+    /* Main */
+    main {
+        margin-bottom: 3rem;
+    }
+}
