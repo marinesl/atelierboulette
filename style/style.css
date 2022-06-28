@@ -67,6 +67,10 @@ h2 span {
     color: #625E99;
 }
 
+h2 img {
+    vertical-align: text-top;
+}
+
 div.description {
     font-family: 'Poppins-SemiBold';
     font-size: 30px;
@@ -83,6 +87,15 @@ div.description div {
     margin-bottom: 3px;
     padding: 0 5px;
     display: table;
+}
+
+div.content-image {
+    position: relative;
+    height: 100%;
+}
+
+div.content-image img {
+    position: absolute;
 }
 
 
@@ -167,38 +180,33 @@ div.description div {
  * SLIDE HOME
  **************************/
 
-#section-home > div {
-    position: relative;
+#section-home div.content-image {
     height: 83%;
 }
 
-#section-home > div img {
-    position: absolute;
-}
-
-#section-home > div img:nth-child(1) {
+#section-home div.content-image img:nth-child(1) {
     left: 20rem;
     z-index: 1;
 }
 
-#section-home > div img:nth-child(2) {
+#section-home div.content-image img:nth-child(2) {
     left: 42rem;
     top: -3rem;
     z-index: 2;
 }
 
-#section-home > div img:nth-child(3) {
+#section-home div.content-image img:nth-child(3) {
     left: 50rem;
     bottom: 4rem;
     z-index: 2;
 }
 
-#section-home > div img:nth-child(4) {
+#section-home div.content-image img:nth-child(4) {
     right: 20rem;
     z-index: 3;
 }
 
-#section-home > div img:nth-child(5) {
+#section-home div.content-image img:nth-child(5) {
     left: 38rem;
     z-index: 4;
 }
@@ -212,10 +220,191 @@ div.description div {
 
 #section-paper-art .content {
     display: flex;
+    height: 100%;
+}
+
+#section-paper-art .content h2 {
+    padding-left: 5rem;
 }
 
 #section-paper-art .content .description {
+    left: 15rem;
+}
+
+#section-paper-art div.content > div {
+    height: 100%;
+}
+
+#section-paper-art div.content > div.content-text {
+    width: 60vw;
+}
+
+#section-paper-art div.content > div.content-image {
+    width: 40vw;
+}
+
+#section-paper-art div.content-image img:nth-child(1) {
+    left: 5rem;
+    top: 3rem;
+    z-index: 2;
+}
+
+#section-paper-art div.content-image img:nth-child(2) {
+    left: 25rem;
+    top: 10rem;
+    z-index: 3;
+}
+
+#section-paper-art div.content-image img:nth-child(3) {
+    left: -7rem;
+    top: 20rem;
+}
+
+#section-paper-art div.content-image img:nth-child(4) {
+    right: 11rem;
+    top: 20rem;
+    z-index: 4;
+}
+
+#section-paper-art div.content-image img:nth-child(5) {
+    left: -12rem;
+    bottom: 5rem;
+}
+
+#section-paper-art div.content-image img:nth-child(6) {
+    right: 15rem;
+    bottom: 4rem;
+    z-index: 5;
+}
+
+
+
+
+/**************************
+ * SLIDE DECO
+ **************************/
+
+#section-deco {
+    position: relative;
+}
+
+#section-deco div.content-text {
+    position: absolute;
+    bottom: 1rem;
+    right: 11rem;
+}
+
+#section-deco div.content-text .description {
+    position: absolute;
+    right: 3rem;
+    top: -5rem;
+    transform: rotate(10deg);
+}
+
+#section-deco div.content-image img:nth-child(1) {
+    right: 35rem;
+    top: 3rem;
+}
+
+#section-deco div.content-image img:nth-child(2) {
+    right: 55rem;
+    top: 8rem;
+}
+
+#section-deco div.content-image img:nth-child(3) {
+    left: 28rem;
+    top: 5rem;
+    z-index: 2;
+}
+
+#section-deco div.content-image img:nth-child(4) {
     left: 10rem;
+    top: 12rem;
+    z-index: 3;
+}
+
+#section-deco div.content-image img:nth-child(5) {
+    top: 28rem;
+    left: 17rem;
+}
+
+#section-deco div.content-image img:nth-child(6) {
+    right: 32rem;
+    top: 8rem;
+}
+
+#section-deco div.content-image img:nth-child(7) {
+    bottom: 4rem;
+    left: 21rem;
+}
+
+
+
+
+/**************************
+ * SLIDE RESINE
+ **************************/
+
+#section-resine .content {
+    display: flex;
+    height: 100%;
+}
+
+#section-resine .content h2 {
+    line-height: 280px;
+    padding-left: 5rem;
+    padding-top: 5rem;
+}
+
+#section-resine .content .description {
+    left: 10rem;
+    top: 2rem;
+}
+
+#section-resine div.content > div {
+    height: 100%;
+}
+
+#section-resine div.content > div.content-text {
+    width: 40vw;
+}
+
+#section-resine div.content > div.content-image {
+    width: 60vw;
+}
+
+#section-resine div.content-image img:nth-child(1) {
+    top: 3rem;
+    left: 7rem;
+}
+
+#section-resine div.content-image img:nth-child(2) {
+    right: 21rem;
+    top: 3rem;
+}
+
+#section-resine div.content-image img:nth-child(3) {
+    top: 25rem;
+    right: 16rem;
+}
+
+#section-resine div.content-image img:nth-child(4) {
+    bottom: 9rem;
+    left: 16rem;
+}
+
+#section-resine div.content-image img:nth-child(5) {
+    bottom: 15rem;
+    left: 6rem;
+}
+
+#section-resine div.content-image img:nth-child(6) {
+    top: 22rem;
+    left: 24rem;
+}
+
+#section-resine div.content-image img:nth-child(7) {
+    bottom: 10rem;
 }
 
 
@@ -225,6 +414,11 @@ div.description div {
  * SLIDE CONTACT
  **************************/
 
+#section-contact {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
 #section-contact h2 {
     font-size: 150px;
 }
@@ -233,8 +427,15 @@ div.description div {
     font-family: 'Poppins-SemiBold';
     font-size: 40px;
     text-transform: uppercase;
+    text-align: center;
     color: #fff;
     background-color: #625E99;
+    padding-top: 8px;
+}
+
+#section-contact .content {
+    display: flex;
+    justify-content: space-around;
 }
 
 #section-contact > div:nth-child(2) .message {
