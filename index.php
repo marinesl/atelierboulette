@@ -1,3 +1,64 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'php/PHPMailer/src/Exception.php';
+require 'php/PHPMailer/src/PHPMailer.php';
+require 'php/PHPMailer/src/SMTP.php';
+
+// Message à afficher
+$form_message = null;
+
+
+if (!empty($_POST)) {
+
+    // GET les informations du formulaire
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    if ($name != '' && $email != '' && $message != '') {
+
+        /****************
+         * MAIL
+        *****************/
+            //Create an instance; passing `true` enables exceptions
+            $mail = new PHPMailer(true);
+
+            try {
+                //Server settings
+                // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                // $mail->isSMTP();                                            //Send using SMTP
+                $mail->Host       = 'burrito.o2switch.net';                     //Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                $mail->Username   = 'contact@marinelancelin.fr';                     //SMTP username
+                $mail->Password   = 'baM3i7m2RiRx';                               //SMTP password
+                $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+                $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+                //Recipients
+                $mail->setFrom('contact@marinelancelin.fr', 'Mailer');
+                $mail->addAddress('atelierboulette@gmail.com');     //Add a recipient
+
+                // Content
+                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->Subject = 'Prise de contact';
+                $mail->Body    = '<p>'.$message.'</p><p>'.$name.'</p><p>'.$email.'</p>';
+
+                // Envoi du mail
+                $mail->send();
+                $form_message = 'Message envoyé !';
+            } catch (Exception $e) {
+                $form_message = "Erreur de formulaire : {$mail->ErrorInfo}";
+            }
+        //
+    } else {
+        $form_message = "Merci de remplir tous les champs.";
+    }
+}
+?>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -54,7 +115,7 @@
                     <div class="description">
                         <div>Cake topper, cartes étapes,</div>
                         <div>panneaux, initiales 3D,</div>
-                        <div>fanions, cartes de voeux...</div>
+                        <div>fanions, cartes de v&#339;ux...</div>
                     </div>
                 </div>
 
@@ -77,7 +138,7 @@
                     <div>Couronnes de fleurs,</div>
                     <div>fanions, initiale 2D...</div>
                 </div>
-                <div><h2>D<img src="image/slide-deco/lettre e.svg">co</h2></div>
+                <div><h2>D<img src="image/slide-deco/lettre e.svg" alt="é">co</h2></div>
             </div>
 
             <div class="content-image">
@@ -96,7 +157,7 @@
         <div class="section" id="section-resine" data-anchor="resine">
             <div class="content">
                 <div class="content-text">
-                    <div><h2>R<img src="image/slide-deco/lettre e.svg">si<br><span>ne</span></h2></div>
+                    <div><h2>R<img src="image/slide-deco/lettre e.svg" alt="é">si<br><span>ne</span></h2></div>
                     <div class="description">
                         <div>Porte clé, cake topper,</div>
                         <div>marque page...</div>
@@ -118,57 +179,66 @@
 
         <!-- Slider Up cycling -->
         <div class="section" id="section-up-cycling" data-anchor="upcycling">
-            <div><h2><span>Up</span> cycling</h2></div>
-            <div class="description">
-                <div>Porte clé, marque page,</div>
-                <div>étiquette de voyage...</div>
-            </div>
+            <div class="content">
+                <div class="content-text">
+                    <div class="description">
+                        <div>Porte clé, marque page,</div>
+                        <div>étiquette de voyage...</div>
+                    </div>
+                    <div><h2><span>Up</span> cycling</h2></div>
+                </div>
 
-            <div class="content-image">
-                <img src="image/slide-upcycling/frame 1.svg" alt="Photo">
-                <img src="image/slide-upcycling/frame 2.svg" alt="Photo">
-                <img src="image/slide-upcycling/frame 3.svg" alt="Photo">
-                <img src="image/slide-upcycling/frame 4.svg" alt="Photo">
-                <img src="image/slide-upcycling/frame 5.svg" alt="Photo">
+                <div class="content-image">
+                    <img src="image/slide-upcycling/frame 1.svg" alt="Photo">
+                    <img src="image/slide-upcycling/frame 2.svg" alt="Photo">
+                    <img src="image/slide-upcycling/frame 3.svg" alt="Photo">
+                    <img src="image/slide-upcycling/frame 4.svg" alt="Photo">
+                    <img src="image/slide-upcycling/frame 5.svg" alt="Photo">
 
-                <img src="image/slide-upcycling/ampoule.svg" alt="Ampoule">
-                <img src="image/slide-upcycling/crayon.svg" alt="Crayon">
+                    <img src="image/slide-upcycling/ampoule.svg" alt="Ampoule">
+                    <img src="image/slide-upcycling/crayon.svg" alt="Crayon">
+                </div>
             </div>
         </div>
 
         <!-- Slider Flocage -->
         <div class="section" id="section-flocage" data-anchor="flocage">
-            <div><h2>Flo<span>cage</span></h2></div>
-            <div class="description">
-                <div>Porte clé, marque page,</div>
-                <div>étiquette de voyage, tote bag, pochettes...</div>
-            </div>
+            <div class="content">
+                <div class="content-text">
+                    <div><h2>Flo<br><span>cage</span></h2></div>
+                    <div class="description">
+                        <div>Porte clé, marque page,</div>
+                        <div>étiquette de voyage, tote bag, pochettes...</div>
+                    </div>
+                </div>
 
-            <div>
-                <img src="image/slide-flocage/frame 1.svg" alt="Photo">
-                <img src="image/slide-flocage/tasse.svg" alt="Tasse">
+                <div class="content-image">
+                    <img src="image/slide-flocage/frame 1.svg" alt="Photo">
+                    <img src="image/slide-flocage/tasse.svg" alt="Tasse">
 
-                <img src="image/slide-flocage/frame 2.svg" alt="Photo">
-                <img src="image/slide-flocage/frame 3.svg" alt="Photo">
-                <img src="image/slide-flocage/frame 4.svg" alt="Photo">
+                    <img src="image/slide-flocage/frame 2.svg" alt="Photo">
+                    <img src="image/slide-flocage/frame 3.svg" alt="Photo">
+                    <img src="image/slide-flocage/frame 4.svg" alt="Photo">
 
-                <img src="image/slide-flocage/cactus.svg" alt="Cactus">
+                    <img src="image/slide-flocage/cactus.svg" alt="Cactus">
+                </div>
             </div>
         </div>
 
         <!-- Slider Contact -->
         <div class="section" id="section-contact" data-anchor="contact">
-            <div><h3>Toutes ces realisations sont personnalisables</h3></div>
+            <div><h3>Toutes ces réalisations sont personnalisables</h3></div>
 
             <div class="content">
                 <div>
                     <h2><span>Une</span> question ?</h2>
                     <div>
-                        <form action="">
-                            <input type="text" name="name" id="name" placeholder="Nom et prénom :">
-                            <input type="email" name="email" id="email" placeholder="Email :">
-                            <textarea name="message" id="message" cols="30" rows="10">Message :</textarea>
-                            <p class="message">Message envoyé !</p>
+                        <form action="index.php#contact" 
+                        method="post">
+                            <input type="text" name="name" id="name" placeholder="Nom et prénom :" required>
+                            <input type="email" name="email" id="email" placeholder="Email :" required>
+                            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message :" required></textarea>
+                            <?php if ($form_message != null): ?><p class="message"><?php echo $form_message; ?></p><?php endif; ?>
                             <input type="submit" value="Envoyer">
                         </form>
                     </div>
@@ -177,14 +247,14 @@
                 <div>
                     <div>
                         <h2><span>Un</span> like ?</h2>
-                        <div><a href=""><img src="image/slide-contact/facebook.svg" alt="Facebook"></a></div>
-                        <div><a href=""><img src="image/slide-contact/instagram.svg" alt="Instagram"></a></div>
-                        <div><a href=""><img src="image/slide-contact/etsy.svg" alt="Etsy"></a></div>
+                        <div><a href="https://www.facebook.com/atelierboulette/" target="_blank" title="Page Facebook"><img src="image/slide-contact/facebook.svg" alt="Facebook"></a></div>
+                        <div><a href="https://www.instagram.com/atelierboulette/" target="_blank" title="Page Instagram"><img src="image/slide-contact/instagram.svg" alt="Instagram"></a></div>
+                        <div><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY"><img src="image/slide-contact/etsy.svg" alt="Etsy"></a></div>
                     </div>
 
                     <footer>
                         <div>
-                            <a href="#">Mentions légales</a>
+                            <a href="mentions-legales.html">Mentions légales</a>
                         </div>
                     </footer>
                 </div>
