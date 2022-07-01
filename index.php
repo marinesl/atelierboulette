@@ -30,7 +30,7 @@ if (!empty($_POST)) {
                 //Server settings
                 // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                 // $mail->isSMTP();                                            //Send using SMTP
-                $mail->Host       = 'burrito.o2switch.net';                     //Set the SMTP server to send through
+                /*$mail->Host       = 'burrito.o2switch.net';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
                 $mail->Username   = 'contact@marinelancelin.fr';                     //SMTP username
                 $mail->Password   = 'baM3i7m2RiRx';                               //SMTP password
@@ -47,8 +47,8 @@ if (!empty($_POST)) {
                 $mail->Body    = '<p>'.$message.'</p><p>'.$name.'</p><p>'.$email.'</p>';
 
                 // Envoi du mail
-                $mail->send();
-                $form_message = 'Message envoyé !';
+                $mail->send();*/
+                $form_message = 'Message envoy<img src="image/slide-contact/lettre e.svg" alt="é"> !';
             } catch (Exception $e) {
                 $form_message = "Erreur de formulaire : {$mail->ErrorInfo}";
             }
@@ -66,8 +66,7 @@ if (!empty($_POST)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atelier Boulette</title>
 
-    <!-- TODO: Faire un favicon -->
-
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/fullpage.min.css">
 
@@ -88,7 +87,7 @@ if (!empty($_POST)) {
 
         <!-- Slide Home -->
         <div class="section" id="section-home" data-anchor="accueil">
-            <header>
+            <header class="desktop">
                 <div><img src="image/slide-header/LOGO.svg" alt="Atelier Boulette"><h1>Atelier Boulette</h1></div>
                 <div><a href="#paper-art">Paper Art</a></div>
                 <div><a href="#decoration">Décoration</a></div>
@@ -96,6 +95,33 @@ if (!empty($_POST)) {
                 <div><a href="#upcycling">Upcycling</a></div>
                 <div><a href="#flocage">Flocage</a></div>
                 <div class="header-contact"><a href="#contact">Contact</a></div>
+            </header>
+
+            <div class="logo mobile"><img src="image/slide-header/LOGO.svg" alt="Atelier Boulette"><h1>Atelier Boulette</h1></div>
+
+            <header class="mobile">
+                <nav id="nav" class="nav">
+                    <!-- ACTUAL NAVIGATION MENU -->
+                    <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+                        <li class="nav__item"><a href="#paper-art" class="nav__link">Paper Art</a></li>
+                        <li class="nav__item"><a href="#decoration" class="nav__link">Décoration</a></li>
+                        <li class="nav__item"><a href="#resine" class="nav__link">Résine</a></li>
+                        <li class="nav__item"><a href="#upcycling" class="nav__link">Upcycling</a></li>
+                        <li class="nav__item"><a href="#flocage" class="nav__link">Flocage</a></li>
+                        <li class="nav__item header-contact"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                    
+                    <!-- MENU TOGGLE BUTTON -->
+                    <a href="#nav" class="nav__toggle" aria-expanded="false" aria-controls="menu">
+                        <svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                        <title>Toggle Menu</title>
+                        <g><line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5"/><line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/><line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/><line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5"/></g>
+                        </svg>
+                    </a>
+                    
+                    <!-- ANIMATED BACKGROUND ELEMENT -->
+                    <div class="splash"></div>
+                </nav>
             </header>
 
             <div class="content-image">
@@ -111,7 +137,8 @@ if (!empty($_POST)) {
         <div class="section" id="section-paper-art" data-anchor="paper-art">
             <div class="content">
                 <div class="content-text">
-                    <div><h2>Paper <span>Art</span></h2></div>
+                    <div class="titre"><img src="image/slide-paper-art/paper art.svg" alt="Paper art"></div>
+                    <!-- <div><h2>Paper <span>Art</span></h2></div> -->
                     <div class="description">
                         <div>Cake topper, cartes étapes,</div>
                         <div>panneaux, initiales 3D,</div>
@@ -136,9 +163,10 @@ if (!empty($_POST)) {
             <div class="content-text">
                 <div class="description">
                     <div>Couronnes de fleurs,</div>
-                    <div>fanions, initiale 2D...</div>
+                    <div>fanions, initiales 2D...</div>
                 </div>
-                <div><h2>D<img src="image/slide-deco/lettre e.svg" alt="é">co</h2></div>
+                <!-- <div><h2>D<img src="image/slide-deco/lettre e.svg" alt="é">co</h2></div> -->
+                <div class="titre"><img src="image/slide-deco/deco.svg" alt="Déco"></div>
             </div>
 
             <div class="content-image">
@@ -157,10 +185,11 @@ if (!empty($_POST)) {
         <div class="section" id="section-resine" data-anchor="resine">
             <div class="content">
                 <div class="content-text">
-                    <div><h2>R<img src="image/slide-deco/lettre e.svg" alt="é">si<br><span>ne</span></h2></div>
+                    <!-- <div><h2>R<img src="image/slide-deco/lettre e.svg" alt="é">si<br><span>ne</span></h2></div> -->
+                    <div class="titre"><img src="image/slide-resine/resine.svg" alt="Résine"></div>
                     <div class="description">
-                        <div>Porte clé, cake topper,</div>
-                        <div>marque page...</div>
+                        <div>Porte clés, cake topper,</div>
+                        <div>marques page...</div>
                     </div>
                 </div>
 
@@ -182,10 +211,11 @@ if (!empty($_POST)) {
             <div class="content">
                 <div class="content-text">
                     <div class="description">
-                        <div>Porte clé, marque page,</div>
-                        <div>étiquette de voyage...</div>
+                        <div>Portes clé, marques page,</div>
+                        <div>étiquettes de voyage...</div>
                     </div>
-                    <div><h2><span>Up</span> cycling</h2></div>
+                    <!-- <div><h2><span>Up</span> cycling</h2></div> -->
+                    <div class="titre"><img src="image/slide-upcycling/upcycling.svg" alt="Upcycling"></div>
                 </div>
 
                 <div class="content-image">
@@ -205,10 +235,11 @@ if (!empty($_POST)) {
         <div class="section" id="section-flocage" data-anchor="flocage">
             <div class="content">
                 <div class="content-text">
-                    <div><h2>Flo<br><span>cage</span></h2></div>
+                    <!-- <div><h2>Flo<br><span>cage</span></h2></div> -->
+                    <div class="titre"><img src="image/slide-flocage/flocage.svg" alt="Flocage"></div>
                     <div class="description">
-                        <div>Porte clé, marque page,</div>
-                        <div>étiquette de voyage, tote bag, pochettes...</div>
+                        <div>Portes clé, marques page,</div>
+                        <div>étiquettes de voyage, tote bag, pochettes...</div>
                     </div>
                 </div>
 
@@ -231,7 +262,8 @@ if (!empty($_POST)) {
 
             <div class="content">
                 <div>
-                    <h2><span>Une</span> question ?</h2>
+                    <!-- <h2><span>Une</span> question ?</h2> -->
+                    <div class="titre"><img src="image/slide-contact/une question.svg" alt="Une question ?"></div>
                     <div>
                         <form action="index.php#contact" 
                         method="post">
@@ -246,10 +278,11 @@ if (!empty($_POST)) {
 
                 <div>
                     <div>
-                        <h2><span>Un</span> like ?</h2>
-                        <div><a href="https://www.facebook.com/atelierboulette/" target="_blank" title="Page Facebook"><img src="image/slide-contact/facebook.svg" alt="Facebook"></a></div>
-                        <div><a href="https://www.instagram.com/atelierboulette/" target="_blank" title="Page Instagram"><img src="image/slide-contact/instagram.svg" alt="Instagram"></a></div>
-                        <div><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY"><img src="image/slide-contact/etsy.svg" alt="Etsy"></a></div>
+                        <!-- <h2><span>Un</span> like ?</h2> -->
+                        <div class="titre"><img src="image/slide-contact/un like.svg" alt="Un like ?"></div>
+                        <div class="rs"><a href="https://www.facebook.com/atelierboulette/" target="_blank" title="Page Facebook"><img src="image/slide-contact/facebook.svg" alt="Facebook"></a></div>
+                        <div class="rs"><a href="https://www.instagram.com/atelierboulette/" target="_blank" title="Page Instagram"><img src="image/slide-contact/instagram.svg" alt="Instagram"></a></div>
+                        <div class="rs"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY"><img src="image/slide-contact/etsy.svg" alt="Etsy"></a></div>
                     </div>
 
                     <footer>
