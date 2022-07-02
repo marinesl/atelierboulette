@@ -131,6 +131,8 @@ if (!empty($_POST)) {
                 <img src="image/slide-accueil/frame 4.svg" alt="Photo">
                 <img src="image/slide-accueil/cactus.svg" alt="Cactus">
             </div>
+
+            <button id="button-etsy-mobile" class="button-etsy"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY">en savoir +</a></button>
         </div>
 
         <!-- Slide Paper art -->
@@ -296,7 +298,7 @@ if (!empty($_POST)) {
         </div>
     </div>
 
-    <button id="button-etsy"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY">en savoir +</a></button>
+    <button id="button-etsy-desktop" class="button-etsy"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY">en savoir +</a></button>
     
 
     <script src="script/jquery-3.6.0.min.js"></script>
