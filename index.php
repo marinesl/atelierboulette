@@ -22,38 +22,46 @@ if (!empty($_POST)) {
 
         /****************
          * MAIL
-        *****************/
-            //Create an instance; passing `true` enables exceptions
-            $mail = new PHPMailer(true);
-
+        *****************/            
             try {
-                //Server settings
-                // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-                // $mail->isSMTP();                                            //Send using SMTP
-                /*$mail->Host       = 'burrito.o2switch.net';                     //Set the SMTP server to send through
-                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'contact@marinelancelin.fr';                     //SMTP username
-                $mail->Password   = 'baM3i7m2RiRx';                               //SMTP password
-                $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-                $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail = new PHPMailer;
+                $mail->isSMTP();                                     // Send using SMTP
+                $mail->Host       = MAILER_SMTP;
+                $mail->SMTPAuth   = true;                            // Enable SMTP authentication
+                $mail->Username   = MAILER_EMAIL;
+                $mail->Password   = MAILER_PASSWORD;
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                $mail->Port       = MAILER_PORT;
+                $mail->CharSet = 'UTF-8';
 
                 //Recipients
-                $mail->setFrom('contact@marinelancelin.fr', 'Mailer');
-                $mail->addAddress('atelierboulette@gmail.com');     //Add a recipient
+                $mail->setFrom(MAILER_EMAIL, 'Mailer');
+                $mail->addAddress(MAILER_EMAIL_DEST);
 
                 // Content
-                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->isHTML(true);
                 $mail->Subject = 'Prise de contact';
-                $mail->Body    = '<p>'.$message.'</p><p>'.$name.'</p><p>'.$email.'</p>';
+                // Body message
+                $body = '<p>'.$message.'</p><p>'.$name.'</p><p>'.$email.'</p>';
+                $altMessage = strip_tags($body);
+                $altMessage = htmlspecialchars($altMessage);
+                $mail->Body    = $body;
+                $mail->AltBody = $altMessage;
 
                 // Envoi du mail
-                $mail->send();*/
+                $mail->send();
+
+                // Message à afficher sous le formulaire
                 $form_message = 'Message envoy<img src="image/slide-contact/lettre e.svg" alt="é"> !';
+
             } catch (Exception $e) {
+                // Message à afficher sous le formulaire
                 $form_message = "Erreur de formulaire : {$mail->ErrorInfo}";
             }
         //
+
     } else {
+        // Message à afficher sous le formulaire
         $form_message = "Merci de remplir tous les champs.";
     }
 }
