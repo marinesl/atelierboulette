@@ -249,7 +249,8 @@ if (!empty($_POST)) {
                     <div class="titre"><img src="image/slide-flocage/flocage.svg" alt="Flocage"></div>
                     <div class="description">
                         <div>Portes clé, marques page,</div>
-                        <div>étiquettes de voyage, tote bag, pochettes...</div>
+                        <div>étiquettes de voyage,</div>
+                        <div>tote bag, pochettes...</div>
                     </div>
                 </div>
 
