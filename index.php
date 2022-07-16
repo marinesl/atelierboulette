@@ -52,7 +52,7 @@ if (!empty($_POST)) {
                 $mail->send();
 
                 // Message à afficher sous le formulaire
-                $form_message = 'Message envoy<img src="image/slide-contact/lettre e.svg" alt="é"> !';
+                $form_message = 'Message envoy<img src="image/slide-contact/lettre-e.svg" alt="é"> !';
 
             } catch (Exception $e) {
                 // Message à afficher sous le formulaire
@@ -67,12 +67,16 @@ if (!empty($_POST)) {
 }
 ?>
 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atelier Boulette</title>
+
+    <meta name="description" content="L'atelier Boulette vous propose des accessoires et de la décoration via les méthodes suivantes : Paper art, Résine, Upcycling, Flocage.">
+    <meta name="keywords" content="atelier, boulette, paper art, décoration, résine, upcycling, flocage">
 
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
@@ -97,12 +101,12 @@ if (!empty($_POST)) {
         <div class="section" id="section-home" data-anchor="accueil">
             <header class="desktop">
                 <div><img src="image/slide-header/LOGO.svg" alt="Atelier Boulette"><h1>Atelier Boulette</h1></div>
-                <div><a href="#paper-art">Paper Art</a></div>
-                <div><a href="#decoration">Décoration</a></div>
-                <div><a href="#resine">Résine</a></div>
-                <div><a href="#upcycling">Upcycling</a></div>
-                <div><a href="#flocage">Flocage</a></div>
-                <div class="header-contact"><a href="#contact">Contact</a></div>
+                <div><a href="#paper-art" title="Paper Art">Paper Art</a></div>
+                <div><a href="#decoration" title="Décoration">Décoration</a></div>
+                <div><a href="#resine" title="Résine">Résine</a></div>
+                <div><a href="#upcycling" title="Upcycling">Upcycling</a></div>
+                <div><a href="#flocage" title="Flocage">Flocage</a></div>
+                <div class="header-contact"><a href="#contact" title="Contact">Contact</a></div>
             </header>
 
             <div class="logo mobile"><img src="image/slide-header/LOGO.svg" alt="Atelier Boulette"><h1>Atelier Boulette</h1></div>
@@ -111,12 +115,12 @@ if (!empty($_POST)) {
                 <nav id="nav" class="nav">
                     <!-- ACTUAL NAVIGATION MENU -->
                     <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
-                        <li class="nav__item"><a href="#paper-art" class="nav__link">Paper Art</a></li>
-                        <li class="nav__item"><a href="#decoration" class="nav__link">Décoration</a></li>
-                        <li class="nav__item"><a href="#resine" class="nav__link">Résine</a></li>
-                        <li class="nav__item"><a href="#upcycling" class="nav__link">Upcycling</a></li>
-                        <li class="nav__item"><a href="#flocage" class="nav__link">Flocage</a></li>
-                        <li class="nav__item header-contact"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="#paper-art" class="nav__link" title="Paper Art">Paper Art</a></li>
+                        <li class="nav__item"><a href="#decoration" class="nav__link" title="Décoration">Décoration</a></li>
+                        <li class="nav__item"><a href="#resine" class="nav__link" title="Résine">Résine</a></li>
+                        <li class="nav__item"><a href="#upcycling" class="nav__link" title="Upcycling">Upcycling</a></li>
+                        <li class="nav__item"><a href="#flocage" class="nav__link" title="Flocage">Flocage</a></li>
+                        <li class="nav__item header-contact"><a href="#contact" class="nav__link" title="Contact">Contact</a></li>
                     </ul>
                     
                     <!-- MENU TOGGLE BUTTON -->
@@ -133,22 +137,21 @@ if (!empty($_POST)) {
             </header>
 
             <div class="content-image">
-                <img src="image/slide-accueil/frame 1.svg" alt="Photo">
-                <img src="image/slide-accueil/frame 2.svg" alt="Photo">
-                <img src="image/slide-accueil/frame 3.svg" alt="Photo">
-                <img src="image/slide-accueil/frame 4.svg" alt="Photo">
-                <img src="image/slide-accueil/cactus.svg" alt="Cactus">
+                <img src="image/slide-accueil/frame-1.svg" alt="Paper Art">
+                <img src="image/slide-accueil/frame-2.svg" alt="Décoration">
+                <img src="image/slide-accueil/frame-3.svg" alt="Résine">
+                <img src="image/slide-accueil/frame-4.svg" alt="Upcycling">
+                <img src="image/slide-accueil/cactus.svg" alt="Flocage">
             </div>
 
-            <button id="button-etsy-mobile" class="button-etsy"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY">en savoir +</a></button>
+            <div id="button-etsy-mobile" class="button-etsy"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY">en savoir +</a></div>
         </div>
 
         <!-- Slide Paper art -->
         <div class="section" id="section-paper-art" data-anchor="paper-art">
             <div class="content">
                 <div class="content-text">
-                    <div class="titre"><img src="image/slide-paper-art/paper art.svg" alt="Paper art"></div>
-                    <!-- <div><h2>Paper <span>Art</span></h2></div> -->
+                    <div class="titre"><img src="image/slide-paper-art/paper-art.svg" alt="Paper art"></div>
                     <div class="description">
                         <div>Cake topper, cartes étapes,</div>
                         <div>panneaux, initiales 3D,</div>
@@ -157,13 +160,13 @@ if (!empty($_POST)) {
                 </div>
 
                 <div class="content-image">
-                    <img src="image/slide-paper-art/frame 1.svg" alt="Photo">
-                    <img src="image/slide-paper-art/tasse.svg" alt="Tasse">
+                    <img src="image/slide-paper-art/frame-1.svg" alt="Cake topper">
+                    <img src="image/slide-paper-art/tasse.svg" alt="Cartes étapes">
 
-                    <img src="image/slide-paper-art/frame 2.svg" alt="Photo">
-                    <img src="image/slide-paper-art/frame 3.svg" alt="Photo">
-                    <img src="image/slide-paper-art/frame 4.svg" alt="Photo">
-                    <img src="image/slide-paper-art/frame 5.svg" alt="Photo">
+                    <img src="image/slide-paper-art/frame-2.svg" alt="Panneaux">
+                    <img src="image/slide-paper-art/frame-3.svg" alt="Initiales 3D">
+                    <img src="image/slide-paper-art/frame-4.svg" alt="Fanions">
+                    <img src="image/slide-paper-art/frame-5.svg" alt="Cartes de v&#339;ux">
                 </div>
             </div>
         </div>
@@ -175,19 +178,18 @@ if (!empty($_POST)) {
                     <div>Couronnes de fleurs,</div>
                     <div>fanions, initiales 2D...</div>
                 </div>
-                <!-- <div><h2>D<img src="image/slide-deco/lettre e.svg" alt="é">co</h2></div> -->
-                <div class="titre"><img src="image/slide-deco/deco.svg" alt="Déco"></div>
+                <div class="titre"><img src="image/slide-deco/deco.svg" alt="Décoration"></div>
             </div>
 
             <div class="content-image">
-                <img src="image/slide-deco/frame 1.svg" alt="Photo">
-                <img src="image/slide-deco/frame 2.svg" alt="Photo">
-                <img src="image/slide-deco/frame 3.svg" alt="Photo">
-                <img src="image/slide-deco/frame 4.svg" alt="Photo">
-                <img src="image/slide-deco/frame 5.svg" alt="Photo">
+                <img src="image/slide-deco/frame-1.svg" alt="Couronnes de fleurs">
+                <img src="image/slide-deco/frame-2.svg" alt="Fanions">
+                <img src="image/slide-deco/frame-3.svg" alt="Initiales 2D">
+                <img src="image/slide-deco/frame-4.svg" alt="Couronnes de fleurs">
+                <img src="image/slide-deco/frame-5.svg" alt="Fanions">
 
-                <img src="image/slide-deco/ampoule.svg" alt="Ampoule">
-                <img src="image/slide-deco/crayon.svg" alt="Crayon">
+                <img src="image/slide-deco/ampoule.svg" alt="Initiales 2D">
+                <img src="image/slide-deco/crayon.svg" alt="Couronnes de fleurs">
             </div>
         </div>
 
@@ -195,7 +197,6 @@ if (!empty($_POST)) {
         <div class="section" id="section-resine" data-anchor="resine">
             <div class="content">
                 <div class="content-text">
-                    <!-- <div><h2>R<img src="image/slide-deco/lettre e.svg" alt="é">si<br><span>ne</span></h2></div> -->
                     <div class="titre"><img src="image/slide-resine/resine.svg" alt="Résine"></div>
                     <div class="description">
                         <div>Porte clés, cake topper,</div>
@@ -204,14 +205,14 @@ if (!empty($_POST)) {
                 </div>
 
                 <div class="content-image">
-                    <img src="image/slide-resine/frame 1.svg" alt="Photo">
-                    <img src="image/slide-resine/frame 2.svg" alt="Photo">
-                    <img src="image/slide-resine/frame 3.svg" alt="Photo">
-                    <img src="image/slide-resine/frame 4.svg" alt="Photo">
-                    <img src="image/slide-resine/frame 5.svg" alt="Photo">
+                    <img src="image/slide-resine/frame-1.svg" alt="Porte clés">
+                    <img src="image/slide-resine/frame-2.svg" alt="Cake topper">
+                    <img src="image/slide-resine/frame-3.svg" alt="Marques page">
+                    <img src="image/slide-resine/frame-4.svg" alt="Porte clés">
+                    <img src="image/slide-resine/frame-5.svg" alt="Cake topper">
 
-                    <img src="image/slide-resine/cactus.svg" alt="Cactus">
-                    <img src="image/slide-resine/tasse.svg" alt="Tasse">
+                    <img src="image/slide-resine/cactus.svg" alt="Marques page">
+                    <img src="image/slide-resine/tasse.svg" alt="Porte clés">
                 </div>
             </div>
         </div>
@@ -224,19 +225,18 @@ if (!empty($_POST)) {
                         <div>Portes clé, marques page,</div>
                         <div>étiquettes de voyage...</div>
                     </div>
-                    <!-- <div><h2><span>Up</span> cycling</h2></div> -->
                     <div class="titre"><img src="image/slide-upcycling/upcycling.svg" alt="Upcycling"></div>
                 </div>
 
                 <div class="content-image">
-                    <img src="image/slide-upcycling/frame 1.svg" alt="Photo">
-                    <img src="image/slide-upcycling/frame 2.svg" alt="Photo">
-                    <img src="image/slide-upcycling/frame 3.svg" alt="Photo">
-                    <img src="image/slide-upcycling/frame 4.svg" alt="Photo">
-                    <img src="image/slide-upcycling/frame 5.svg" alt="Photo">
+                    <img src="image/slide-upcycling/frame-1.svg" alt="Portes clé">
+                    <img src="image/slide-upcycling/frame-2.svg" alt="Marques page">
+                    <img src="image/slide-upcycling/frame-3.svg" alt="&#201;tiquettes de voyage">
+                    <img src="image/slide-upcycling/frame-4.svg" alt="Portes clé">
+                    <img src="image/slide-upcycling/frame-5.svg" alt="Marques page">
 
-                    <img src="image/slide-upcycling/ampoule.svg" alt="Ampoule">
-                    <img src="image/slide-upcycling/crayon.svg" alt="Crayon">
+                    <img src="image/slide-upcycling/ampoule.svg" alt="&#201;tiquettes de voyage">
+                    <img src="image/slide-upcycling/crayon.svg" alt="Portes clé">
                 </div>
             </div>
         </div>
@@ -245,7 +245,6 @@ if (!empty($_POST)) {
         <div class="section" id="section-flocage" data-anchor="flocage">
             <div class="content">
                 <div class="content-text">
-                    <!-- <div><h2>Flo<br><span>cage</span></h2></div> -->
                     <div class="titre"><img src="image/slide-flocage/flocage.svg" alt="Flocage"></div>
                     <div class="description">
                         <div>Portes clé, marques page,</div>
@@ -255,14 +254,14 @@ if (!empty($_POST)) {
                 </div>
 
                 <div class="content-image">
-                    <img src="image/slide-flocage/frame 1.svg" alt="Photo">
-                    <img src="image/slide-flocage/tasse.svg" alt="Tasse">
+                    <img src="image/slide-flocage/frame-1.svg" alt="Pochettes">
+                    <img src="image/slide-flocage/tasse.svg" alt="Marques page">
 
-                    <img src="image/slide-flocage/frame 2.svg" alt="Photo">
-                    <img src="image/slide-flocage/frame 3.svg" alt="Photo">
-                    <img src="image/slide-flocage/frame 4.svg" alt="Photo">
+                    <img src="image/slide-flocage/frame-2.svg" alt="&#201;tiquettes de voyage">
+                    <img src="image/slide-flocage/frame-3.svg" alt="Tote bag">
+                    <img src="image/slide-flocage/frame-4.svg" alt="Pochettes">
 
-                    <img src="image/slide-flocage/cactus.svg" alt="Cactus">
+                    <img src="image/slide-flocage/cactus.svg" alt="Tote bag">
                 </div>
             </div>
         </div>
@@ -273,8 +272,7 @@ if (!empty($_POST)) {
 
             <div class="content">
                 <div>
-                    <!-- <h2><span>Une</span> question ?</h2> -->
-                    <div class="titre"><img src="image/slide-contact/une question.svg" alt="Une question ?"></div>
+                    <div class="titre"><img src="image/slide-contact/une-question.svg" alt="Une question ?"></div>
                     <div>
                         <form action="index.php#contact" 
                         method="post">
@@ -289,16 +287,15 @@ if (!empty($_POST)) {
 
                 <div>
                     <div>
-                        <!-- <h2><span>Un</span> like ?</h2> -->
-                        <div class="titre"><img src="image/slide-contact/un like.svg" alt="Un like ?"></div>
-                        <div class="rs"><a href="https://www.facebook.com/atelierboulette/" target="_blank" title="Page Facebook"><img src="image/slide-contact/facebook.svg" alt="Facebook"></a></div>
-                        <div class="rs"><a href="https://www.instagram.com/atelierboulette/" target="_blank" title="Page Instagram"><img src="image/slide-contact/instagram.svg" alt="Instagram"></a></div>
+                        <div class="titre"><img src="image/slide-contact/un-like.svg" alt="Un like ?"></div>
+                        <div class="rs"><a href="https://www.facebook.com/atelierboulette/" target="_blank" title="Facebook"><img src="image/slide-contact/facebook.svg" alt="Facebook"></a></div>
+                        <div class="rs"><a href="https://www.instagram.com/atelierboulette/" target="_blank" title="Instagram"><img src="image/slide-contact/instagram.svg" alt="Instagram"></a></div>
                         <div class="rs"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY"><img src="image/slide-contact/etsy.svg" alt="Etsy"></a></div>
                     </div>
 
                     <footer>
                         <div>
-                            <a href="mentions-legales.html">Mentions légales</a>
+                            <a href="mentions-legales.html" title="Mentions légales">Mentions légales</a>
                         </div>
                     </footer>
                 </div>
@@ -307,7 +304,7 @@ if (!empty($_POST)) {
         </div>
     </div>
 
-    <button id="button-etsy-desktop" class="button-etsy"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY">en savoir +</a></button>
+    <div id="button-etsy-desktop" class="button-etsy"><a href="https://etsy.me/3BCv00C" target="_blank" title="Boutique ETSY">en savoir +</a></div>
     
 
     <script src="script/jquery-3.6.0.min.js"></script>

@@ -1,0 +1,83 @@
+/**************************
+ * FONTS
+ **************************/
+
+ @font-face {
+    font-family: 'Poppins-Regular';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+         url('fonts/Poppins-Regular.woff') format('woff'),
+         url('fonts/Poppins-Regular.svg.ttf') format('truetype'),
+         url('fonts/Poppins-Regular.ttf.svg#poppinsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('fonts/Poppins-SemiBold.woff') format('woff'),
+         url('fonts/Poppins-SemiBold.ttf') format('truetype'),
+         url('fonts/Poppins-SemiBold.svg#poppinssemibold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Winkle-Regular';
+    src: url('fonts/Winkle-Regular.woff2') format('woff2'),
+         url('fonts/Winkle-Regular.woff') format('woff'),
+         url('fonts/Winkle-Regular.ttf') format('truetype'),
+         url('fonts/Winkle-Regular.svg#winkleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/**************************
+ * COMMUN
+ **************************/
+
+body {
+    background-color: rgba(139, 133, 184, 0.2);
+    font-family: 'Poppins-Regular';
+}
+
+h1, h2, span.bold {
+    font-family: 'Poppins-SemiBold';
+}
+
+h1, h2 {
+    color: #625E99;
+}
+
+
+
+
+/**************************
+ * HEADER
+ **************************/
+
+header {
+    text-align: center;
+}
+
+
+
+
+/**************************
+ * SECTION
+ **************************/
+
+@media (min-width: 320px) {
+    section { margin: 0 0.5rem; }
+}
+
+@media (min-width: 768px) {
+    section { margin: 0 1rem; }
+}
+
+@media (min-width: 1024px) { 
+    section { margin: 0 5rem; }
+}
