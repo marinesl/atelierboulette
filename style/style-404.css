@@ -1,0 +1,99 @@
+/**************************
+ * FONTS
+ **************************/
+
+@font-face {
+    font-family: 'Winkle-Regular';
+    src: url('fonts/Winkle-Regular.woff2') format('woff2'),
+         url('fonts/Winkle-Regular.woff') format('woff'),
+         url('fonts/Winkle-Regular.ttf') format('truetype'),
+         url('fonts/Winkle-Regular.svg#winkleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('fonts/Poppins-SemiBold.woff') format('woff'),
+         url('fonts/Poppins-SemiBold.ttf') format('truetype'),
+         url('fonts/Poppins-SemiBold.svg#poppinssemibold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #8B85B8;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* RIGHT */
+#right h1 {
+    font-family: 'Winkle-Regular';
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+#right h2 {
+    font-family: 'Poppins-SemiBold';
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#right div {
+    font-family: 'Poppins-SemiBold';
+    text-transform: uppercase;
+    color: #DBD9ED;
+}
+
+
+@media (min-width: 320px) {
+    body { flex-direction: column; }
+
+    /* LEFT */
+    #left { text-align: center; }
+    #left img { width: 50%; }
+
+    /* RIGHT */
+    #right { text-align: center; }
+    #right h1 { font-size: 110px; }
+    #right h2 { font-size: 25px; line-height: 30px; }
+    #right div { font-size: 22px; }
+}
+
+@media (min-width: 768px) {
+    /* RIGHT */
+    #right h1 { font-size: 180px; }
+    #right h2 { font-size: 30px; line-height: 35px; }
+    #right div { font-size: 27px; }
+}
+
+@media (min-width: 1024px) {
+    body { gap: 3rem; flex-direction: row; }
+
+    /* LEFT */
+    #left { text-align: right; }
+    #left img { width: 80%; }
+
+    /* RIGHT */
+    #right { text-align: left; }
+}
+
+@media (min-width: 1440px) {
+    /* LEFT */
+    #left img { width: auto; }
+
+    /* RIGHT */
+    #right h1 { font-size: 240px; }
+    #right h2 { font-size: 40px; line-height: 45px; }
+    #right div { font-size: 32px; }
+}

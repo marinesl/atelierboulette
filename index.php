@@ -67,7 +67,7 @@ if (!empty($_POST)) {
 }
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -115,12 +115,12 @@ if (!empty($_POST)) {
                 <nav id="nav" class="nav">
                     <!-- ACTUAL NAVIGATION MENU -->
                     <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
-                        <li class="nav__item"><a href="#paper-art" class="nav__link" title="Paper Art">Paper Art</a></li>
-                        <li class="nav__item"><a href="#decoration" class="nav__link" title="Décoration">Décoration</a></li>
-                        <li class="nav__item"><a href="#resine" class="nav__link" title="Résine">Résine</a></li>
-                        <li class="nav__item"><a href="#upcycling" class="nav__link" title="Upcycling">Upcycling</a></li>
-                        <li class="nav__item"><a href="#flocage" class="nav__link" title="Flocage">Flocage</a></li>
-                        <li class="nav__item header-contact"><a href="#contact" class="nav__link" title="Contact">Contact</a></li>
+                        <li class="nav__item"><a data-section="paper-art" class="nav__link" title="Paper Art">Paper Art</a></li>
+                        <li class="nav__item"><a data-section="deco" class="nav__link" title="Décoration">Décoration</a></li>
+                        <li class="nav__item"><a data-section="resine" class="nav__link" title="Résine">Résine</a></li>
+                        <li class="nav__item"><a data-section="up-cycling" class="nav__link" title="Upcycling">Upcycling</a></li>
+                        <li class="nav__item"><a data-section="flocage" class="nav__link" title="Flocage">Flocage</a></li>
+                        <li class="nav__item header-contact"><a data-section="contact" class="nav__link" title="Contact">Contact</a></li>
                     </ul>
                     
                     <!-- MENU TOGGLE BUTTON -->

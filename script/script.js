@@ -28,6 +28,30 @@ menuToggle.addEventListener('click', e => {
 });
 
 
+// On click on link
+document.querySelectorAll('.nav__link').forEach(item => {
+    item.addEventListener('click', e => {
+        e.preventDefault();
+
+        // GET href
+        var section = e.target.dataset['section']
+        console.log(section)
+
+        // Scoll to section
+        document.getElementById("section-" + section).scrollIntoView();
+
+
+        // Close menu
+        console.log(isMenuOpen)
+        isMenuOpen = !isMenuOpen;
+        // toggle a11y attributes and active class
+        menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
+        menu.hidden = !isMenuOpen;
+        nav.classList.toggle('nav--open');
+    })
+})
+
+
 // TRAP TAB INSIDE NAV WHEN OPEN
 nav.addEventListener('keydown', e => {
     // abort if menu isn't open or modifier keys are pressed
