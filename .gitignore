@@ -4,3 +4,7 @@ image/.DS_Store
 .DS_Store
 
 .env
+
+README.md
+
+readme/*
