@@ -82,6 +82,16 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/fullpage.min.css">
 
+    <meta property="og:title" content="Atelier Boulette" />
+    <meta property="og:type" content="image" />
+    <meta property="og:url" content="http://atelierboulette.fr" />
+    <meta property="og:image" content="image/og_facebook.png" />
+
+    <meta name="twitter:title" content="Atelier Boulette">
+    <meta name="twitter:description" content="L'atelier Boulette vous propose des accessoires et de la décoration via les méthodes suivantes : Paper art, Résine, Upcycling, Flocage.">
+    <meta name="twitter:image" content="image/og_twitter.png">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- TODO: Décommenter en ligne -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-R89XSB38RB"></script>
@@ -91,6 +101,20 @@ if (!empty($_POST)) {
         gtag('js', new Date());
         gtag('config', 'G-R89XSB38RB');
     </script> -->
+
+    <!-- TODO: Décommenter en ligne -->
+    <!--<script>
+        window.axeptioSettings = {
+          clientId: "62d31ef359b46f3d612e7105",
+        };
+         
+        (function(d, s) {
+          var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+          e.async = true; e.src = "//static.axept.io/sdk.js";
+          t.parentNode.insertBefore(e, t);
+        })(document, "script");
+    </script>-->
+
 </head>
 
 <body>
